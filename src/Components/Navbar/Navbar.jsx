@@ -5,7 +5,6 @@ import "./navbar.scss";
 function Navbar({ setUserName, userData, setOpen }) {
   const [data, setData] = useState([]);
   const [toggle, setToggle] = useState(false);
-  const [name, setName] = useState("");
   const userDataConst = async () => {
     const user = await get.getUser("Jock1323");
     const ans = user.data;
@@ -37,7 +36,6 @@ function Navbar({ setUserName, userData, setOpen }) {
                   className="form-control nav__input text-light"
                   id="search"
                   placeholder="Search"
-                  // onChange={(e) => setName(e.target.value)}
                 />
               </label>
             </form>

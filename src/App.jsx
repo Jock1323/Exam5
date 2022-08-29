@@ -19,7 +19,6 @@ function App() {
   useEffect(() => {
     userData();
   }, [userName]);
-  console.log(data);
   return (
     <>
       {open ? (
@@ -34,7 +33,7 @@ function App() {
               <Main />
             </dataContext.Provider>
           ) : (
-            "erroe"
+            "error"
           )}
         </>
       ) : (

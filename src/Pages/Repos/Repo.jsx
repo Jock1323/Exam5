@@ -10,12 +10,9 @@ function Repo() {
       .then((res) => res.json())
       .then((data) => setRepos(data));
   }, [page]);
-  const number = [];
-  console.log(repos);
   const btnPrev = useRef();
   const btnNext = useRef();
   let x = Math.ceil(data.public_repos) / 30;
-  console.log(x);
   return (
     <>
       <section className="repo pt-3">

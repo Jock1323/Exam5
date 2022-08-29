@@ -1,16 +1,8 @@
 import React, { useContext, useEffect } from "react";
 import dataContext from "../../Context/DataContext";
 import "./sidebar.scss";
-// https://api.github.com/repos/Chamomile2023/BookshelterWithReact/commits
 function SideBar() {
   const data = useContext(dataContext);
-  // useEffect(() => {
-  //   fetch(
-  //     "https://api.github.com/repos/Chamomile2023/BookshelterWithReact/commits"
-  //   )
-  //     .then((res) => res.json())
-  //     .then((data) => console.log(data));
-  // }, []);
   return (
     <div className="bar mx-md-4">
       <div className="bar__img-box">

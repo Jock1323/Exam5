@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
 import { NavLink } from "react-router-dom";
-import get from "../../API/GET/Get";
 import dataContext from "../../Context/DataContext";
 import "./fixedmenu.scss";
 function FixedMenu({ className }) {
