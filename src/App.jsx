@@ -17,6 +17,7 @@ function App() {
   useEffect(() => {
     userData();
   }, [userName]);
+  console.log(data);
   return (
     <>
       <Header setUserName={setUserName} userData={userData} />

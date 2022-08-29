@@ -84,7 +84,7 @@ function FixedMenu({ className }) {
               }
             >
               <i className="bi bi-star"></i>
-              <span className="fixed__link-text ms-2">Stars</span>
+              <span className="fixed__link-text">Stars</span>
             </NavLink>
           </li>
           <div className="dropdown hidden__drop">
