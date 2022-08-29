@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
+import { NavLink } from "react-router-dom";
 import get from "../../API/GET/Get";
 import "./navbar.scss";
-function Navbar({ setUserName, userData }) {
+function Navbar({ setUserName, userData, setOpen }) {
   const [data, setData] = useState([]);
   const [toggle, setToggle] = useState(false);
   const [name, setName] = useState("");
@@ -10,12 +11,6 @@ function Navbar({ setUserName, userData }) {
     const ans = user.data;
     setData(ans);
   };
-  // document.addEventListener("keydown", (e) => {
-  //   if (e.code === "Enter") {
-  //     setUserName(name);
-  //     userData();
-  //   }
-  // });
   const form = (e) => {
     e.preventDefault();
     setUserName(e.target[0].value);
@@ -31,9 +26,9 @@ function Navbar({ setUserName, userData }) {
             className="fa-solid fa-bars text-light me-auto"
             onClick={() => setToggle(!toggle)}
           ></i>
-          <a className="navbar-brand bg-white me-md-3" href="#">
+          <NavLink to="/" className="navbar-brand bg-white me-md-3" href="#">
             <i className="fa-brands fa-github text-bg-dark"></i>
-          </a>
+          </NavLink>
           <ul className="w-75 bg-dark nav__list">
             <form className="nav__form bg-dark" onSubmit={form}>
               <label htmlFor="search" className="nav__label w-100">
@@ -109,7 +104,7 @@ function Navbar({ setUserName, userData }) {
             <li className="nav__item  hidden">
               <a href="#" className="text-light nav__link">
                 <i className="fa-solid fa-arrow-right-from-bracket me-2"></i>
-                <span>Sign out</span>
+                <span onClick={() => setOpen(false)}>Sign out</span>
               </a>
             </li>
           </ul>
@@ -239,7 +234,11 @@ function Navbar({ setUserName, userData }) {
                   <hr />
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <a
+                    className="dropdown-item"
+                    href="#"
+                    onClick={() => setOpen(false)}
+                  >
                     Sign out
                   </a>
                 </li>
@@ -325,7 +324,7 @@ function Navbar({ setUserName, userData }) {
           <li className="nav__item  hidden">
             <a href="#" className="text-light nav__link">
               <i className="fa-solid fa-arrow-right-from-bracket me-2"></i>
-              <span>Sign out</span>
+              <span onClick={() => setOpen(false)}>Sign out</span>
             </a>
           </li>
         </ul>

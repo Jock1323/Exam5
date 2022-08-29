@@ -23,7 +23,7 @@ function FixedMenu({ className }) {
         <ul className="fixed__list d-flex align-items-center justify-content-md-center">
           <li>
             <NavLink
-              to="overview"
+              to="/"
               className={({ isActive }) =>
                 `d-flex align-items-center fixed__link ${
                   isActive ? "fixed__link-active" : ""

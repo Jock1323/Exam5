@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import dataContext from "../../Context/DataContext";
 import "./overview.scss";
-// <https://api.github.com/user/repos?page=3&per_page=100>
 function Overview() {
   const data = useContext(dataContext);
   const [repos, setRepos] = useState([]);

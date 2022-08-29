@@ -17,7 +17,7 @@ function Main() {
         <div className="container d-flex flex-column flex-md-row">
           <SideBar />
           <Routes>
-            <Route path={"overview"} element={<Overview />} />
+            <Route index element={<Overview />} />
             <Route path={"repo"} element={<Repo />} />
             <Route path={"project"} element={<Project />} />
             <Route path={"pack"} element={<Pack />} />

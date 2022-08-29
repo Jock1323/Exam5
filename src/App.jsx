@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import get from "./API/GET/Get";
 import Header from "./Components/Header/Header";
+import Login from "./Components/Login/Login";
 import Main from "./Components/Main/Main";
 import dataContext from "./Context/DataContext";
 function App() {
   const [data, setData] = useState([]);
   const [load, setLoad] = useState(false);
   const [userName, setUserName] = useState("Jock1323");
+  const [open, setOpen] = useState(false);
   const userData = async () => {
     setLoad(false);
     const user = await get.getUser(userName);
@@ -20,13 +22,23 @@ function App() {
   console.log(data);
   return (
     <>
-      <Header setUserName={setUserName} userData={userData} />
-      {load ? (
-        <dataContext.Provider value={data}>
-          <Main />
-        </dataContext.Provider>
+      {open ? (
+        <>
+          <Header
+            setUserName={setUserName}
+            setOpen={setOpen}
+            userData={userData}
+          />
+          {load ? (
+            <dataContext.Provider value={data}>
+              <Main />
+            </dataContext.Provider>
+          ) : (
+            "erroe"
+          )}
+        </>
       ) : (
-        "erroe"
+        <Login setOpen={setOpen} />
       )}
     </>
   );
