@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import dataContext from "../../Context/DataContext";
 import "./sidebar.scss";
 function SideBar() {
@@ -15,9 +16,13 @@ function SideBar() {
       <div className="bar__follow my-3">
         <i className="bi bi-people"></i>
         <b className="bar__follow-num ms-2 me-1">{data.followers}</b>
-        <span className="bar__follow-text me-2">follower</span>
+        <NavLink to={"follower"} className="bar__follow-text me-2">
+          follower
+        </NavLink>
         <b className="bar__follow-num me-1">{data.following}</b>
-        <span className="bar__follow-text">following</span>
+        <NavLink to={"following"} className="bar__follow-text">
+          following
+        </NavLink>
       </div>
       <hr className="mt-4" />
     </div>

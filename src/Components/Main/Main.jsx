@@ -9,6 +9,8 @@ import Pack from "../../Pages/Packages/Pack";
 import Stars from "../../Pages/Stars/Stars";
 import SideBar from "../SideBar/SideBar";
 import Footer from "../Footer/Footer";
+import Follower from "../../Pages/Follower/Follower";
+import Following from "../../Pages/Following/Following";
 function Main() {
   return (
     <>
@@ -22,6 +24,8 @@ function Main() {
             <Route path={"project"} element={<Project />} />
             <Route path={"pack"} element={<Pack />} />
             <Route path={"star"} element={<Stars />} />
+            <Route path={"follower"} element={<Follower />} />
+            <Route path={"following"} element={<Following />} />
           </Routes>
         </div>
         <div className="container">

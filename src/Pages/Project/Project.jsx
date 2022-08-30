@@ -15,7 +15,7 @@ function Project() {
             <i className="bi bi-columns"></i>
             <span className="projects-num ms-2">0</span>
             <span className="projects-text mx-2">Open</span>
-            <i class="bi bi-archive"></i>
+            <i className="bi bi-archive"></i>
             <span className="projects-num mx-2">0</span>
             <span className="projects-text">Closed</span>
           </div>

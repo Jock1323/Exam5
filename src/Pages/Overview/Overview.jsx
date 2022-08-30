@@ -30,7 +30,6 @@ function Overview() {
       .then((ans) => setRepos(ans));
     findMonth();
   }, []);
-  console.log(repos);
   return (
     <>
       <div className="overview">
@@ -92,7 +91,11 @@ function Overview() {
             {repos.length > 0 ? (
               repos.map((item, index) => (
                 <li className="overview__commits-item" key={index}>
-                  <a href={item.html_url} className="overview__commits-link">
+                  <a
+                    href={item.html_url}
+                    target="_blank"
+                    className="overview__commits-link"
+                  >
                     {item.owner.login}/{item.name}
                   </a>
                 </li>

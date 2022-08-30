@@ -1,0 +1,33 @@
+.follower{
+    width: 70%;
+}
+.follower__item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.follower__img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.follower__link{
+    font-size: 14px;
+    text-decoration: none;
+    color: #000;
+    margin-left: 20px;
+}
+.follower__link:hover{
+    color: blue;
+}
+.follower-btn{
+    font-size: 14px;
+    border: 1px solid gray;
+    background-color: rgba(lightgray,.4);
+    height: 35px;
+}
+@media only screen and (max-width:767px){
+    .follower{
+        width: 100%;
+    }
+}

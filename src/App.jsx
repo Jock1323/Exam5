@@ -16,6 +16,7 @@ function App() {
     setData(ans);
     setLoad(true);
   };
+
   useEffect(() => {
     userData();
   }, [userName]);
